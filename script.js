@@ -5,7 +5,7 @@
 const adjectives = [
     "Fruitful",
     "One",
-    "Second",
+    "Second Round of",
     "Short",
     "Beautiful",
     "Brave",
