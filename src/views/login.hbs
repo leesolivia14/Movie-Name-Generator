@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<div class="app">
+<head>
+    
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <title>Movie Title Generator</title>
+    <div class="main-title">
+
+        <div class="topnav">
+            <a href="/">Home</a>
+            <a href="/profile">Profile</a>
+            <a href="/login">Login</a>
+        </div>
+
+        <h1>Movie Title Generator</h1>
+        
+    </div>
+
+
+</head>
+
+<body>
+    <div id="signup">
+        <div id="signup-div">
+        
+        
+        
+        <form class="login" method = "POST" action="/login">
+        <h1>Login </h1>
+
+        {{errormsg}}
+
+        <div>
+            <label for="username">Username</label> 
+            <input id="username" name="username" type="text" required placeholder="Username"> 
+        </div>
+
+        <br>
+
+         <div>
+            <label for="password">Password</label> 
+            <input id="password" name="password" type="text"  style="-webkit-text-security: circle" required placeholder="Password"> 
+        </div>
+
+<!---
+         <div>
+            <label for="email">E-mail</label> 
+            <input id="email" name="email" type="text" required> 
+        </div>
+  -->  
+        <button type="submit">Login</button>
+         <a href="/register">Register</a>
+        </form>
+        
+        </div>
+
+
+
+    </div>
+    
+
+
+    <script defer type="text/javascript" src="client.mjs"></script>
+</body>
+</div>
+</html>

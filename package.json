@@ -1,0 +1,41 @@
+{
+  "name": "final-project-leesolivia14",
+  "version": "1.0.0",
+  "description": "The content below is an example project proposal / requirements document. Replace the text below the lines marked \"__TODO__\" with details specific to your project. Remove the \"TODO\" lines.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.mjs",
+    "dev": "nodemon src/app.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nyu-csci-ua-0467-001-002-fall-2022/final-project-leesolivia14.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nyu-csci-ua-0467-001-002-fall-2022/final-project-leesolivia14/issues"
+  },
+  "homepage": "https://github.com/nyu-csci-ua-0467-001-002-fall-2022/final-project-leesolivia14#readme",
+  "dependencies": {
+    "an-array-of-english-words": "^2.0.0",
+    "bcrypt": "^5.1.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.1",
+    "create-react-app": "^5.0.1",
+    "express": "^4.18.2",
+    "express-flash": "^0.0.2",
+    "express-session": "^1.17.3",
+    "hbs": "^4.2.0",
+    "mongoose": "^6.7.2",
+    "mongoose-slug-generator": "^1.0.4",
+    "mongoose-slug-plugin": "^2.1.0",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^7.1.2",
+    "popular-english-words": "^1.0.2"
+  },
+  "keywords": [],
+  "devDependencies": {}
+}

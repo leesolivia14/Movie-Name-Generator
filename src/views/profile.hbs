@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+     
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <title>Movie Title Generator</title>
+    <div class="main-title">
+        <div class="topnav">
+            <a href="/">Home</a>
+            <a href="/profile">Profile</a>
+            <a href="/logout">Logout</a>
+        </div>
+
+        <h1>Movie Title Generator</h1>
+    </div>
+    
+</head>
+
+<body>
+
+    <div class="main-content">
+
+
+        <div id="user-form">
+            
+
+            <form method = "POST" action="">
+                <label for="userinput">Got an idea?</label>
+                <input id="user-input-box" name="userinput" type="text"> 
+                <input id="user-input" type="submit" value="SAVE">
+            </form>
+        </div>
+
+
+        <div class="flex-child" id="saved-items">
+            <p>Your Likes</p>
+            <ul id="user-likes-list">
+                {{#each savedTitles as |t|}}
+                <li>
+                    {{t}}
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    
+
+
+
+    </div>
+    
+    
+    <script defer type="text/javascript" src="client.mjs"></script>
+</body>
+
+</html>

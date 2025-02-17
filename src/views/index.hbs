@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <title>Movie Title Generator</title>
+    <div class="main-title">
+        <div class="topnav">
+            <a class="active" href="/">Home</a>
+            <a href="/profile">Profile</a>
+            <a href="/login">{{loggedin}}</a>
+        </div>
+
+        <h1>Movie Title Generator</h1>
+    </div>
+    
+</head>
+
+<body>
+    
+    <div class="main-content">
+        
+
+        <form method = "POST" action="">
+            <button name="generateButton" id ="generate-button">GENERATE</button>
+ 
+        </form>
+
+        <form method = "POST" type="text" action="">
+           <label for="userinput">Include this word: </label>
+            <input id="user-input-box" name="userinput" type="text"> 
+            <input id="user-input" type="submit" value="SAVE">
+ 
+        </form>
+        
+
+        <i><p id ="generated-title">"{{generatedTitle}}"</p></i>
+        
+        
+        <form method="POST" action="">
+            <button name="likeButton" id ="like-button">❤️❤️❤️❤️❤️❤️</button>
+        </form>
+
+
+        <div class="flex-child" id="saved-items">
+                <p></p>
+                <ul id="user-likes-list">
+                    {{#each savedTitles as |t|}}
+                    <li>
+                        {{t}}
+                    </li>
+                    {{/each}}
+                </ul>
+        </div>
+        
+
+    </div>
+
+    <div class="main-form">
+
+    </div>
+    
+
+
+    
+    
+    <script defer type="text/javascript" src="client.mjs"></script>
+    
+</body>
+
+</html>
