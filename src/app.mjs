@@ -209,7 +209,7 @@ app.post('/', (req, res) => {
     }
 
     
-
+    console.log(req.body);
     //pink button pressed
     if (req.body.likeButton !== undefined && req.body.generateButton === undefined){
         if (req.isAuthenticated()) {
@@ -439,7 +439,7 @@ app.post('/register', async (req, res) => {
        
 
 //app.listen(3000);
-const PORT = 3000;
-app.listen((process.env.PORT || 3000), () => {
+const PORT = 3001;
+app.listen((process.env.PORT || 3001), () => {
     console.log(`Server listening on ${PORT}`);
 });

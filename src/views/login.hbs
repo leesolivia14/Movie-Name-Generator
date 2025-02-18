@@ -5,15 +5,15 @@
     
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <title>Movie Title Generator</title>
-    <div class="main-title">
+    
 
         <div class="topnav">
             <a href="/">Home</a>
             <a href="/profile">Profile</a>
             <a href="/login">Login</a>
         </div>
-
-        <h1>Movie Title Generator</h1>
+    <div class="main-title">
+         <h1>Movie 🎬🎬🎬 <br/>Title 🎬🎬🎬🎬<br/>Generator 🎬</h1>
         
     </div>
 
@@ -21,26 +21,19 @@
 </head>
 
 <body>
-    <div id="signup">
+    <div id="signup" class="login-div">
         <div id="signup-div">
         
-        
-        
         <form class="login" method = "POST" action="/login">
-        <h1>Login </h1>
+        <h1 id="login-title">Sign in</h1>
+        <div class="error-msg">{{errormsg}}<br/><br/></div>
+        
 
-        {{errormsg}}
+        <div class="login-form">
+            <input id="user-input-box" id="username" name="username" type="text" required placeholder="Username"> 
 
-        <div>
-            <label for="username">Username</label> 
-            <input id="username" name="username" type="text" required placeholder="Username"> 
-        </div>
-
-        <br>
-
-         <div>
-            <label for="password">Password</label> 
-            <input id="password" name="password" type="text"  style="-webkit-text-security: circle" required placeholder="Password"> 
+        <br/><br/>
+            <input id="user-input-box" id="password" name="password" type="text"  style="-webkit-text-security: circle" required placeholder="Password"> 
         </div>
 
 <!---
@@ -48,10 +41,14 @@
             <label for="email">E-mail</label> 
             <input id="email" name="email" type="text" required> 
         </div>
-  -->  
-        <button type="submit">Login</button>
-         <a href="/register">Register</a>
+  -->  <div class="login-buttons">
+            <div id="login-button">
+                <button type="submit">Login</button>
+            </div>
+            <div id="login-button">
+                <a id="register" href="/register">Register</a>
         </form>
+            </div>
         
         </div>
 

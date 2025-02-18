@@ -1,60 +1,220 @@
 
 .topnav a:hover {
-    background-color: lightblue;
-    color: blue;
+    background-color: darkgrey;
+    color: black;
 }
 
 
 .main-content {
     text-align: center;
     position: relative;
-    padding-top: 20px;
 
 }
 
-.main-title{
+.topnav {
+    margin-top: 20px;
     text-align: center;
-    background-color: gainsboro;
-    box-shadow: 0px 6px 12px;
-    font-size: 2em;
-
+    margin-bottom: 20px;
 }
+
+@keyframes floatAround {
+    0% { transform: translate(-50%, -50%) translateX(0) translateY(0); }
+    25% { transform: translate(-50%, -50%) translateX(20px) translateY(-10px); }
+    50% { transform: translate(-50%, -50%) translateX(-15px) translateY(20px); }
+    75% { transform: translate(-50%, -50%) translateX(10px) translateY(-15px); }
+    100% { transform: translate(-50%, -50%) translateX(0) translateY(0); }
+}
+
+@keyframes floatDiagonal {
+    0% { transform: translate(-50%, -50%) rotate(-20deg) translateX(0) translateY(0); }
+    25% { transform: translate(-50%, -50%) rotate(-20deg) translateX(20px) translateY(-10px); }
+    50% { transform: translate(-50%, -50%) rotate(-20deg) translateX(-15px) translateY(20px); }
+    75% { transform: translate(-50%, -50%) rotate(-20deg) translateX(10px) translateY(-15px); }
+    100% { transform: translate(-50%, -50%) rotate(-20deg) translateX(0) translateY(0); }
+  }
+  
+.main-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.1); /* Light transparency */
+    white-space: nowrap; /* Prevents breaking */
+    z-index: -1; /* Sends it to the background */
+    user-select: none; /* Prevents selection */
+    pointer-events: none; /* Ignore interactions */
+    filter: blur(5px);
+    font-size: clamp(3rem, 10vw, 7.25rem);
+    position: absolute;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    z-index: -1;
+    user-select: none;
+    pointer-events: none;
+    animation: floatAround 15s infinite ease-in-out;
+    animation-play-state: running;
+}
+  
 
 body {
-	background-color: lightcyan;
-	
+	background-color: lightgrey;
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
 }
 
 a {
     text-decoration: none;
-    margin-left: 15px;
 }
+
+.include-this-word {
+    margin-top: 150px;
+    margin-bottom: 20px;
+}
+
+#user-input-box {
+    text-align: left;
+    opacity: 0.7;
+
+    width: 200px;
+    color: rgb(36, 35, 42);
+    font-size: 16px;
+    line-height: 20px;
+    min-height: 20px;
+    border-radius: 4px;
+    padding: 8px 16px;
+    border: 2px solid transparent;
+    box-shadow: rgb(0 0 0 / 12%) 0px 1px 3px, rgb(0 0 0 / 24%) 0px 1px 2px;
+    background: rgb(251, 251, 251);
+    transition: all 0.1s ease 0s;
+    :focus{
+        border: 2px solid rgb(124, 138, 255);
+    }
+
+}
+
+
 
 #generate-button {
     align-items: center;
-    padding: 24px 64px;
-    background-color: lightblue;
-    font-size: 1em;
+    background-color: #42cbf5;
+    font-size: 2em;
     box-shadow: 0px 6px 12px;
     border-style: none;
+    padding: 24px 64px;
+    font-color: black;
 }
 
-
-.register, .login{
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    display: block;
-    width: 100%;
-    max-width: 400px;
-    padding: 50px 30px;
-    background-image: linear-gradient(to bottom, gainsboro, lightgrey);
+#like-button{
+    align-items: center;
+    background-color: #ff70d2;
+    font-size: 2em;
     box-shadow: 0px 6px 12px;
-    border-radius: 16px;
-
+    border-style: none;
+    padding: 24px 64px;
+    font-color: black;
 }
+
+
+
+.generated-title {
+    font-size: 1em;
+    padding: 10px;
+}
+
+
+.buttons-div {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+/* From Uiverse.io by mobinkakei */ 
+.cta {
+    display: flex;
+    padding: 11px 33px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    background: #6225e6;
+    transition: 1s;
+    box-shadow: 6px 6px 0 black;
+    transform: skewX(-15deg);
+    border: none;
+    cursor: pointer;
+  }
+  
+  .cta:focus {
+    outline: none;
+  }
+  
+  .cta:hover {
+    transition: 0.5s;
+    box-shadow: 10px 10px 0 #fbc638;
+  }
+  
+  .cta .second {
+    transition: 0.5s;
+    margin-right: 0px;
+  }
+  
+  .cta:hover .second {
+    transition: 0.5s;
+    margin-right: 45px;
+  }
+  
+  .span {
+    transform: skewX(15deg);
+  }
+  
+  .second {
+    width: 20px;
+    margin-left: 30px;
+    position: relative;
+    top: 12%;
+  }
+  
+  .one {
+    transition: 0.4s;
+    transform: translateX(-60%);
+  }
+  
+  .two {
+    transition: 0.5s;
+    transform: translateX(-30%);
+  }
+  
+  .cta:hover .three {
+    animation: color_anim 1s infinite 0.2s;
+  }
+  
+  .cta:hover .one {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.6s;
+  }
+  
+  .cta:hover .two {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.4s;
+  }
+  
+  @keyframes color_anim {
+    0% {
+      fill: white;
+    }
+  
+    50% {
+      fill: #fbc638;
+    }
+  
+    100% {
+      fill: white;
+    }
+  }
+  
+
+
 
 
 
@@ -69,14 +229,7 @@ a {
     text-align: center;
 }
 
-#user-form {
-    text-align: center;
 
-    padding: 15px 32px;
-    margin-right: 30px;
-    margin-left: 15px;
-    
-}
 
 #save-your-own-list, #user-likes-list{
     list-style: none;
@@ -99,12 +252,7 @@ a {
 
 
 
-#like-button{
-    background-color: pink;
-    padding: 24px 64px;
-    box-shadow: 0px 6px 12px;
-    border-style: none;
-}
+
 
 #generated-title {
     font-size: 4em;
@@ -112,20 +260,63 @@ a {
 }
 
 
-#login-button{
-    background-color: gainsboro;
-    padding: 5px 10px;
-}
-
-.error-msg {
-    padding: 10px 15px; 
-    background-color: white;
-    border-radius: 8px; 
-    margin-bottom: 15px;
-    color: red;
+.register, .login{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    padding: 30px 30px;
+    background-image: linear-gradient(to bottom, gainsboro, lightgrey);
     box-shadow: 0px 6px 12px;
-    
+    border-radius: 16px;
+    opacity: 0.9;
 }
 
+.login-div {
+    display: flex;
+    opacity: 0.9;
+    background-color: gray;
+}
 
+.login-form {
+}
+
+#login-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: left;
+    margin-left: 85px;
+}
+
+.login-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0px;
+    margin-top: 15px;
+}
+
+button {
+    all: unset; /* Resets all default browser styles */
+}
+  
+
+#login-button {
+    background-color: #42cbf5;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    margin: 0 30px;
+    max-width: 50px;
+}
+
+#login-button:hover {
+    background-color: #0056b3;
+}
 

@@ -87,6 +87,7 @@ export function generateTitle() {
 
     let rand_title = `${rand_adj} ${rand_noun}`;
 
+    console.log(rand_title);
     return rand_title;
     //generated_title_box.innerHTML = rand_title;
 }
